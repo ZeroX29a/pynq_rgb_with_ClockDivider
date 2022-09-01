@@ -17,3 +17,5 @@ why did I do it this way? why not!
 Demo is given Below.
 
 ![demo](display.gif)
+
+Source is [Linked](https://github.com/ZeroX29a/pynq_clock_Divider_with_sw)
