@@ -3,7 +3,7 @@
 
 Clock Dividers of 2, 4, 8 Hz connected to r,g,b pins of led. 
 There are much simpler ways to change the colors of rgb led in loop with less than 10-15 lines of code in PYNQ framework
-why did I made it this way? why not!
+why did I do it this way? why not!
 
 ![schmatics](image.png)
 ## Pin Layout
