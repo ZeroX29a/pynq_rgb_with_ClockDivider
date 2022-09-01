@@ -1,0 +1,27 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-364,-516",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port port-id_clk_125mhz -pg 1 -lvl 0 -x -10 -y -220 -defaultsOSRD
+preplace port port-id_r -pg 1 -lvl 3 -x 480 -y -360 -defaultsOSRD
+preplace port port-id_g -pg 1 -lvl 3 -x 480 -y -210 -defaultsOSRD
+preplace port port-id_b -pg 1 -lvl 3 -x 480 -y -70 -defaultsOSRD
+preplace port port-id_en_switch -pg 1 -lvl 0 -x -10 -y -200 -defaultsOSRD
+preplace inst clk_dvdr_2hz -pg 1 -lvl 2 -x 350 -y -360 -defaultsOSRD
+preplace inst clk_dvdr_4hz -pg 1 -lvl 2 -x 350 -y -210 -defaultsOSRD
+preplace inst clk_dvdr_8hz -pg 1 -lvl 2 -x 350 -y -70 -defaultsOSRD
+preplace inst enable_0 -pg 1 -lvl 1 -x 120 -y -210 -defaultsOSRD
+preplace netloc clk_dvdr_0_CLK_OUT 1 2 1 N -360
+preplace netloc clk_dvdr_1_CLK_OUT 1 2 1 N -210
+preplace netloc clk_dvdr_2_CLK_OUT 1 2 1 N -70
+preplace netloc clk_125mhz_1 1 0 1 N -220
+preplace netloc enable_0_clk_out 1 1 1 230 -360n
+preplace netloc en_switch_1 1 0 1 N -200
+levelinfo -pg 1 -10 120 350 480
+pagesize -pg 1 -db -bbox -sgen -150 -550 540 120
+"
+}
+

@@ -1,0 +1,83 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Thu Sep  1 23:03:34 2022
+| Host         : machine running 64-bit Ubuntu 20.04.4 LTS
+| Command      : report_control_sets -verbose -file main_design_wrapper_control_sets_placed.rpt
+| Design       : main_design_wrapper
+| Device       : xc7z020
+------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |     5 |
+|    Minimum number of control sets                        |     5 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    24 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     5 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     3 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               4 |            4 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              84 |           21 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------+---------------+-------------------------------------+------------------+----------------+--------------+
+|               Clock Signal              | Enable Signal |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------------------+---------------+-------------------------------------+------------------+----------------+--------------+
+|  en_switch_IBUF                         |               |                                     |                1 |              1 |         1.00 |
+|  main_design_i/enable_0/U0/clk_out_BUFG |               |                                     |                3 |              3 |         1.00 |
+|  main_design_i/enable_0/U0/clk_out_BUFG |               | main_design_i/clk_dvdr_8hz/U0/clear |                7 |             28 |         4.00 |
+|  main_design_i/enable_0/U0/clk_out_BUFG |               | main_design_i/clk_dvdr_4hz/U0/clear |                7 |             28 |         4.00 |
+|  main_design_i/enable_0/U0/clk_out_BUFG |               | main_design_i/clk_dvdr_2hz/U0/clear |                7 |             28 |         4.00 |
++-----------------------------------------+---------------+-------------------------------------+------------------+----------------+--------------+
+
+

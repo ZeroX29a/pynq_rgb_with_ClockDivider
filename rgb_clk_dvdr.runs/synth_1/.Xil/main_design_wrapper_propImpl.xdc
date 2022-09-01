@@ -1,0 +1,11 @@
+set_property SRC_FILE_INFO {cfile:/home/rootuser/Desktop/Vivado/rgb_clk_dvdr/rgb_clk_dvdr.srcs/constrs_1/new/constraints.xdc rfile:../../../rgb_clk_dvdr.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { clk_125mhz }]; #IO_L13P_T2_MRCC_35 Sch=sysclk
+set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M20   IOSTANDARD LVCMOS33 } [get_ports { en_switch }]; #IO_L7N_T1_AD2N_35 Sch=sw[0]
+set_property src_info {type:XDC file:1 line:94 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN T14   IOSTANDARD LVCMOS33 } [get_ports { r }]; #IO_L5P_T0_34 Sch=ar[0]
+set_property src_info {type:XDC file:1 line:95 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33 } [get_ports { g }]; #IO_L2N_T0_34 Sch=ar[1]
+set_property src_info {type:XDC file:1 line:96 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN U13   IOSTANDARD LVCMOS33 } [get_ports { b }]; #IO_L3P_T0_DQS_PUDC_B_34 Sch=ar[2]

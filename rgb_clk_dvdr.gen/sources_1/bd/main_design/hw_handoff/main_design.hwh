@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Sep  1 23:02:16 2022" VIVADOVERSION="2022.1">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="main_design" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk_125mhz" SIGIS="clk" SIGNAME="External_Ports_clk_125mhz">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="enable_0" PORT="clk_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="r" SIGIS="undef" SIGNAME="clk_dvdr_2hz_CLK_OUT">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_dvdr_2hz" PORT="CLK_OUT"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="g" SIGIS="undef" SIGNAME="clk_dvdr_4hz_CLK_OUT">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_dvdr_4hz" PORT="CLK_OUT"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="b" SIGIS="undef" SIGNAME="clk_dvdr_8hz_CLK_OUT">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_dvdr_8hz" PORT="CLK_OUT"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="en_switch" SIGIS="undef" SIGNAME="External_Ports_en_switch">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="enable_0" PORT="en"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/clk_dvdr_2hz" HWVERSION="1.0" INSTANCE="clk_dvdr_2hz" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_dvdr" VLNV="xilinx.com:module_ref:clk_dvdr:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIVISOR" VALUE="0x3B9ACA0"/>
+        <PARAMETER NAME="Component_Name" VALUE="main_design_clk_dvdr_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_IN" SIGIS="undef" SIGNAME="enable_0_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enable_0" PORT="clk_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CLK_OUT" SIGIS="undef" SIGNAME="clk_dvdr_2hz_CLK_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="r"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/clk_dvdr_4hz" HWVERSION="1.0" INSTANCE="clk_dvdr_4hz" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_dvdr" VLNV="xilinx.com:module_ref:clk_dvdr:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIVISOR" VALUE="0x1DCD650"/>
+        <PARAMETER NAME="Component_Name" VALUE="main_design_clk_dvdr_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_IN" SIGIS="undef" SIGNAME="enable_0_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enable_0" PORT="clk_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CLK_OUT" SIGIS="undef" SIGNAME="clk_dvdr_4hz_CLK_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="g"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/clk_dvdr_8hz" HWVERSION="1.0" INSTANCE="clk_dvdr_8hz" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_dvdr" VLNV="xilinx.com:module_ref:clk_dvdr:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIVISOR" VALUE="0x0EE6B28"/>
+        <PARAMETER NAME="Component_Name" VALUE="main_design_clk_dvdr_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_IN" SIGIS="undef" SIGNAME="enable_0_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="enable_0" PORT="clk_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CLK_OUT" SIGIS="undef" SIGNAME="clk_dvdr_8hz_CLK_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="b"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/enable_0" HWVERSION="1.0" INSTANCE="enable_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="enable" VLNV="xilinx.com:module_ref:enable:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="main_design_enable_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk_in" SIGIS="undef" SIGNAME="External_Ports_clk_125mhz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_125mhz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="External_Ports_en_switch">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="en_switch"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="clk_out" SIGIS="undef" SIGNAME="enable_0_clk_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_dvdr_4hz" PORT="CLK_IN"/>
+            <CONNECTION INSTANCE="clk_dvdr_2hz" PORT="CLK_IN"/>
+            <CONNECTION INSTANCE="clk_dvdr_8hz" PORT="CLK_IN"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

@@ -1,0 +1,194 @@
+
+*** Running vivado
+    with args -log main_design_clk_dvdr_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main_design_clk_dvdr_1_0.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source main_design_clk_dvdr_1_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top main_design_clk_dvdr_1_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 299688
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2585.109 ; gain = 0.000 ; free physical = 4072 ; free virtual = 5390
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main_design_clk_dvdr_1_0' [/home/rootuser/Desktop/Vivado/rgb_clk_dvdr/rgb_clk_dvdr.gen/sources_1/bd/main_design/ip/main_design_clk_dvdr_1_0/synth/main_design_clk_dvdr_1_0.vhd:63]
+	Parameter DIVISOR bound to: 31250000 - type: integer 
+INFO: [Synth 8-3491] module 'clk_dvdr' declared at '/home/rootuser/Desktop/Vivado/rgb_clk_dvdr/rgb_clk_dvdr.srcs/sources_1/new/clk_dvdr.v:23' bound to instance 'U0' of component 'clk_dvdr' [/home/rootuser/Desktop/Vivado/rgb_clk_dvdr/rgb_clk_dvdr.gen/sources_1/bd/main_design/ip/main_design_clk_dvdr_1_0/synth/main_design_clk_dvdr_1_0.vhd:84]
+INFO: [Synth 8-6157] synthesizing module 'clk_dvdr' [/home/rootuser/Desktop/Vivado/rgb_clk_dvdr/rgb_clk_dvdr.srcs/sources_1/new/clk_dvdr.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clk_dvdr' (0#1) [/home/rootuser/Desktop/Vivado/rgb_clk_dvdr/rgb_clk_dvdr.srcs/sources_1/new/clk_dvdr.v:23]
+INFO: [Synth 8-256] done synthesizing module 'main_design_clk_dvdr_1_0' (0#1) [/home/rootuser/Desktop/Vivado/rgb_clk_dvdr/rgb_clk_dvdr.gen/sources_1/bd/main_design/ip/main_design_clk_dvdr_1_0/synth/main_design_clk_dvdr_1_0.vhd:63]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 2585.109 ; gain = 0.000 ; free physical = 4181 ; free virtual = 5709
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 2585.109 ; gain = 0.000 ; free physical = 4154 ; free virtual = 5793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 2593.113 ; gain = 8.004 ; free physical = 4154 ; free virtual = 5794
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 2593.113 ; gain = 8.004 ; free physical = 4141 ; free virtual = 5793
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 2593.113 ; gain = 8.004 ; free physical = 3396 ; free virtual = 5480
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 2593.113 ; gain = 8.004 ; free physical = 3389 ; free virtual = 5478
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 2593.113 ; gain = 8.004 ; free physical = 3388 ; free virtual = 5478
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2593.113 ; gain = 8.004 ; free physical = 3244 ; free virtual = 5496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2593.113 ; gain = 8.004 ; free physical = 3244 ; free virtual = 5496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2593.113 ; gain = 8.004 ; free physical = 3244 ; free virtual = 5496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2593.113 ; gain = 8.004 ; free physical = 3244 ; free virtual = 5496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2593.113 ; gain = 8.004 ; free physical = 3244 ; free virtual = 5496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2593.113 ; gain = 8.004 ; free physical = 3244 ; free virtual = 5497
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     7|
+|2     |LUT1   |     1|
+|3     |LUT2   |     1|
+|4     |LUT3   |     4|
+|5     |LUT4   |     1|
+|6     |LUT5   |     1|
+|7     |LUT6   |     7|
+|8     |FDRE   |    29|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+---------+------+
+|      |Instance |Module   |Cells |
++------+---------+---------+------+
+|1     |top      |         |    51|
+|2     |  U0     |clk_dvdr |    51|
++------+---------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2593.113 ; gain = 8.004 ; free physical = 3243 ; free virtual = 5496
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2593.113 ; gain = 8.004 ; free physical = 3224 ; free virtual = 5491
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2593.121 ; gain = 8.004 ; free physical = 3224 ; free virtual = 5491
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2593.121 ; gain = 0.000 ; free physical = 3354 ; free virtual = 5698
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2649.141 ; gain = 0.000 ; free physical = 3137 ; free virtual = 5541
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 8fe03db1
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2649.141 ; gain = 64.031 ; free physical = 3517 ; free virtual = 5940
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/rootuser/Desktop/Vivado/rgb_clk_dvdr/rgb_clk_dvdr.runs/main_design_clk_dvdr_1_0_synth_1/main_design_clk_dvdr_1_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP main_design_clk_dvdr_1_0, cache-ID = 698f157b58c29555
+INFO: [Common 17-1381] The checkpoint '/home/rootuser/Desktop/Vivado/rgb_clk_dvdr/rgb_clk_dvdr.runs/main_design_clk_dvdr_1_0_synth_1/main_design_clk_dvdr_1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_design_clk_dvdr_1_0_utilization_synth.rpt -pb main_design_clk_dvdr_1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  1 22:57:31 2022...

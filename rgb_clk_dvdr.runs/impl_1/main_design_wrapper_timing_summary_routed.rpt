@@ -1,0 +1,742 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Thu Sep  1 23:03:48 2022
+| Host         : machine running 64-bit Ubuntu 20.04.4 LTS
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file main_design_wrapper_timing_summary_routed.rpt -pb main_design_wrapper_timing_summary_routed.pb -rpx main_design_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design       : main_design_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                                                       Violations  
+---------  ----------------  ----------------------------------------------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell                                       87          
+CKLD-2     Warning           Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  1           
+TIMING-20  Warning           Non-clocked latch                                                 1           
+LATCH-1    Advisory          Existing latches in the design                                    1           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (88)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (172)
+5. checking no_input_delay (0)
+6. checking no_output_delay (3)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (88)
+-------------------------
+ There is 1 register/latch pin with no clock driven by root clock pin: en_switch (HIGH)
+
+ There are 87 register/latch pins with no clock driven by root clock pin: main_design_i/enable_0/U0/clk_out_reg/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (172)
+--------------------------------------------------
+ There are 172 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (3)
+-------------------------------
+ There are 3 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  175          inf        0.000                      0                  175           NA           NA                      NA                    NA  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)         Period(ns)      Frequency(MHz)
+-----        ------------         ----------      --------------
+sys_clk_pin  {0.000 5.000}        8.000           125.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+(none)        sys_clk_pin                 
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           174 Endpoints
+Min Delay           174 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_2hz/U0/CLK_OUT_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            r
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.849ns  (logic 4.039ns (69.063%)  route 1.809ns (30.937%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y89        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_2hz/U0/CLK_OUT_reg/C
+    SLICE_X111Y89        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_design_i/clk_dvdr_2hz/U0/CLK_OUT_reg/Q
+                         net (fo=1, routed)           1.809     2.265    r_OBUF
+    T14                  OBUF (Prop_obuf_I_O)         3.583     5.849 r  r_OBUF_inst/O
+                         net (fo=0)                   0.000     5.849    r
+    T14                                                               r  r (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_8hz/U0/CLK_OUT_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            b
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.815ns  (logic 4.142ns (71.228%)  route 1.673ns (28.772%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y93        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_8hz/U0/CLK_OUT_reg/C
+    SLICE_X112Y93        FDRE (Prop_fdre_C_Q)         0.518     0.518 r  main_design_i/clk_dvdr_8hz/U0/CLK_OUT_reg/Q
+                         net (fo=1, routed)           1.673     2.191    b_OBUF
+    U13                  OBUF (Prop_obuf_I_O)         3.624     5.815 r  b_OBUF_inst/O
+                         net (fo=0)                   0.000     5.815    b
+    U13                                                               r  b (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_4hz/U0/CLK_OUT_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            g
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.741ns  (logic 4.082ns (71.091%)  route 1.660ns (28.909%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y95        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_4hz/U0/CLK_OUT_reg/C
+    SLICE_X111Y95        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_design_i/clk_dvdr_4hz/U0/CLK_OUT_reg/Q
+                         net (fo=1, routed)           1.660     2.116    g_OBUF
+    U12                  OBUF (Prop_obuf_I_O)         3.626     5.741 r  g_OBUF_inst/O
+                         net (fo=0)                   0.000     5.741    g
+    U12                                                               r  g (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_4hz/U0/counter_reg[0]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.502ns  (logic 0.952ns (17.304%)  route 4.550ns (82.696%))
+  Logic Levels:           5  (FDRE=1 LUT6=4)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y90        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+    SLICE_X110Y90        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/Q
+                         net (fo=3, routed)           1.121     1.577    main_design_i/clk_dvdr_4hz/U0/counter_reg[3]
+    SLICE_X111Y90        LUT6 (Prop_lut6_I0_O)        0.124     1.701 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10/O
+                         net (fo=1, routed)           0.640     2.341    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10_n_0
+    SLICE_X111Y92        LUT6 (Prop_lut6_I5_O)        0.124     2.465 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9/O
+                         net (fo=1, routed)           0.797     3.262    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9_n_0
+    SLICE_X111Y93        LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5/O
+                         net (fo=1, routed)           1.022     4.408    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5_n_0
+    SLICE_X111Y95        LUT6 (Prop_lut6_I3_O)        0.124     4.532 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_1/O
+                         net (fo=28, routed)          0.970     5.502    main_design_i/clk_dvdr_4hz/U0/clear
+    SLICE_X110Y90        FDRE                                         r  main_design_i/clk_dvdr_4hz/U0/counter_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_4hz/U0/counter_reg[1]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.502ns  (logic 0.952ns (17.304%)  route 4.550ns (82.696%))
+  Logic Levels:           5  (FDRE=1 LUT6=4)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y90        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+    SLICE_X110Y90        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/Q
+                         net (fo=3, routed)           1.121     1.577    main_design_i/clk_dvdr_4hz/U0/counter_reg[3]
+    SLICE_X111Y90        LUT6 (Prop_lut6_I0_O)        0.124     1.701 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10/O
+                         net (fo=1, routed)           0.640     2.341    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10_n_0
+    SLICE_X111Y92        LUT6 (Prop_lut6_I5_O)        0.124     2.465 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9/O
+                         net (fo=1, routed)           0.797     3.262    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9_n_0
+    SLICE_X111Y93        LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5/O
+                         net (fo=1, routed)           1.022     4.408    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5_n_0
+    SLICE_X111Y95        LUT6 (Prop_lut6_I3_O)        0.124     4.532 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_1/O
+                         net (fo=28, routed)          0.970     5.502    main_design_i/clk_dvdr_4hz/U0/clear
+    SLICE_X110Y90        FDRE                                         r  main_design_i/clk_dvdr_4hz/U0/counter_reg[1]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_4hz/U0/counter_reg[2]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.502ns  (logic 0.952ns (17.304%)  route 4.550ns (82.696%))
+  Logic Levels:           5  (FDRE=1 LUT6=4)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y90        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+    SLICE_X110Y90        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/Q
+                         net (fo=3, routed)           1.121     1.577    main_design_i/clk_dvdr_4hz/U0/counter_reg[3]
+    SLICE_X111Y90        LUT6 (Prop_lut6_I0_O)        0.124     1.701 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10/O
+                         net (fo=1, routed)           0.640     2.341    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10_n_0
+    SLICE_X111Y92        LUT6 (Prop_lut6_I5_O)        0.124     2.465 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9/O
+                         net (fo=1, routed)           0.797     3.262    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9_n_0
+    SLICE_X111Y93        LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5/O
+                         net (fo=1, routed)           1.022     4.408    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5_n_0
+    SLICE_X111Y95        LUT6 (Prop_lut6_I3_O)        0.124     4.532 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_1/O
+                         net (fo=28, routed)          0.970     5.502    main_design_i/clk_dvdr_4hz/U0/clear
+    SLICE_X110Y90        FDRE                                         r  main_design_i/clk_dvdr_4hz/U0/counter_reg[2]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.502ns  (logic 0.952ns (17.304%)  route 4.550ns (82.696%))
+  Logic Levels:           5  (FDRE=1 LUT6=4)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y90        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+    SLICE_X110Y90        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/Q
+                         net (fo=3, routed)           1.121     1.577    main_design_i/clk_dvdr_4hz/U0/counter_reg[3]
+    SLICE_X111Y90        LUT6 (Prop_lut6_I0_O)        0.124     1.701 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10/O
+                         net (fo=1, routed)           0.640     2.341    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10_n_0
+    SLICE_X111Y92        LUT6 (Prop_lut6_I5_O)        0.124     2.465 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9/O
+                         net (fo=1, routed)           0.797     3.262    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9_n_0
+    SLICE_X111Y93        LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5/O
+                         net (fo=1, routed)           1.022     4.408    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5_n_0
+    SLICE_X111Y95        LUT6 (Prop_lut6_I3_O)        0.124     4.532 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_1/O
+                         net (fo=28, routed)          0.970     5.502    main_design_i/clk_dvdr_4hz/U0/clear
+    SLICE_X110Y90        FDRE                                         r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_4hz/U0/counter_reg[4]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.361ns  (logic 0.952ns (17.759%)  route 4.409ns (82.241%))
+  Logic Levels:           5  (FDRE=1 LUT6=4)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y90        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+    SLICE_X110Y90        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/Q
+                         net (fo=3, routed)           1.121     1.577    main_design_i/clk_dvdr_4hz/U0/counter_reg[3]
+    SLICE_X111Y90        LUT6 (Prop_lut6_I0_O)        0.124     1.701 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10/O
+                         net (fo=1, routed)           0.640     2.341    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10_n_0
+    SLICE_X111Y92        LUT6 (Prop_lut6_I5_O)        0.124     2.465 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9/O
+                         net (fo=1, routed)           0.797     3.262    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9_n_0
+    SLICE_X111Y93        LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5/O
+                         net (fo=1, routed)           1.022     4.408    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5_n_0
+    SLICE_X111Y95        LUT6 (Prop_lut6_I3_O)        0.124     4.532 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_1/O
+                         net (fo=28, routed)          0.829     5.361    main_design_i/clk_dvdr_4hz/U0/clear
+    SLICE_X110Y91        FDRE                                         r  main_design_i/clk_dvdr_4hz/U0/counter_reg[4]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_4hz/U0/counter_reg[5]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.361ns  (logic 0.952ns (17.759%)  route 4.409ns (82.241%))
+  Logic Levels:           5  (FDRE=1 LUT6=4)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y90        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+    SLICE_X110Y90        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/Q
+                         net (fo=3, routed)           1.121     1.577    main_design_i/clk_dvdr_4hz/U0/counter_reg[3]
+    SLICE_X111Y90        LUT6 (Prop_lut6_I0_O)        0.124     1.701 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10/O
+                         net (fo=1, routed)           0.640     2.341    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10_n_0
+    SLICE_X111Y92        LUT6 (Prop_lut6_I5_O)        0.124     2.465 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9/O
+                         net (fo=1, routed)           0.797     3.262    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9_n_0
+    SLICE_X111Y93        LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5/O
+                         net (fo=1, routed)           1.022     4.408    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5_n_0
+    SLICE_X111Y95        LUT6 (Prop_lut6_I3_O)        0.124     4.532 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_1/O
+                         net (fo=28, routed)          0.829     5.361    main_design_i/clk_dvdr_4hz/U0/clear
+    SLICE_X110Y91        FDRE                                         r  main_design_i/clk_dvdr_4hz/U0/counter_reg[5]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_4hz/U0/counter_reg[6]/R
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.361ns  (logic 0.952ns (17.759%)  route 4.409ns (82.241%))
+  Logic Levels:           5  (FDRE=1 LUT6=4)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y90        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/C
+    SLICE_X110Y90        FDRE (Prop_fdre_C_Q)         0.456     0.456 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[3]/Q
+                         net (fo=3, routed)           1.121     1.577    main_design_i/clk_dvdr_4hz/U0/counter_reg[3]
+    SLICE_X111Y90        LUT6 (Prop_lut6_I0_O)        0.124     1.701 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10/O
+                         net (fo=1, routed)           0.640     2.341    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_10_n_0
+    SLICE_X111Y92        LUT6 (Prop_lut6_I5_O)        0.124     2.465 f  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9/O
+                         net (fo=1, routed)           0.797     3.262    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_9_n_0
+    SLICE_X111Y93        LUT6 (Prop_lut6_I2_O)        0.124     3.386 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5/O
+                         net (fo=1, routed)           1.022     4.408    main_design_i/clk_dvdr_4hz/U0/counter[0]_i_5_n_0
+    SLICE_X111Y95        LUT6 (Prop_lut6_I3_O)        0.124     4.532 r  main_design_i/clk_dvdr_4hz/U0/counter[0]_i_1/O
+                         net (fo=28, routed)          0.829     5.361    main_design_i/clk_dvdr_4hz/U0/clear
+    SLICE_X110Y91        FDRE                                         r  main_design_i/clk_dvdr_4hz/U0/counter_reg[6]/R
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_4hz/U0/counter_reg[20]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_4hz/U0/CLK_OUT_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.296ns  (logic 0.186ns (62.849%)  route 0.110ns (37.151%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y95        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_4hz/U0/counter_reg[20]/C
+    SLICE_X110Y95        FDRE (Prop_fdre_C_Q)         0.141     0.141 f  main_design_i/clk_dvdr_4hz/U0/counter_reg[20]/Q
+                         net (fo=3, routed)           0.110     0.251    main_design_i/clk_dvdr_4hz/U0/counter_reg[20]
+    SLICE_X111Y95        LUT6 (Prop_lut6_I3_O)        0.045     0.296 r  main_design_i/clk_dvdr_4hz/U0/CLK_OUT_i_1/O
+                         net (fo=1, routed)           0.000     0.296    main_design_i/clk_dvdr_4hz/U0/p_0_in
+    SLICE_X111Y95        FDRE                                         r  main_design_i/clk_dvdr_4hz/U0/CLK_OUT_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_8hz/U0/counter_reg[20]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_8hz/U0/CLK_OUT_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.296ns  (logic 0.186ns (62.765%)  route 0.110ns (37.235%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y93        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[20]/C
+    SLICE_X113Y93        FDRE (Prop_fdre_C_Q)         0.141     0.141 f  main_design_i/clk_dvdr_8hz/U0/counter_reg[20]/Q
+                         net (fo=3, routed)           0.110     0.251    main_design_i/clk_dvdr_8hz/U0/counter_reg[20]
+    SLICE_X112Y93        LUT6 (Prop_lut6_I3_O)        0.045     0.296 r  main_design_i/clk_dvdr_8hz/U0/CLK_OUT_i_1/O
+                         net (fo=1, routed)           0.000     0.296    main_design_i/clk_dvdr_8hz/U0/p_0_in
+    SLICE_X112Y93        FDRE                                         r  main_design_i/clk_dvdr_8hz/U0/CLK_OUT_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_2hz/U0/counter_reg[26]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_2hz/U0/CLK_OUT_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.324ns  (logic 0.209ns (64.600%)  route 0.115ns (35.400%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y90        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_2hz/U0/counter_reg[26]/C
+    SLICE_X112Y90        FDRE (Prop_fdre_C_Q)         0.164     0.164 f  main_design_i/clk_dvdr_2hz/U0/counter_reg[26]/Q
+                         net (fo=3, routed)           0.115     0.279    main_design_i/clk_dvdr_2hz/U0/counter_reg[26]
+    SLICE_X111Y89        LUT6 (Prop_lut6_I3_O)        0.045     0.324 r  main_design_i/clk_dvdr_2hz/U0/CLK_OUT_i_1/O
+                         net (fo=1, routed)           0.000     0.324    main_design_i/clk_dvdr_2hz/U0/p_0_in
+    SLICE_X111Y89        FDRE                                         r  main_design_i/clk_dvdr_2hz/U0/CLK_OUT_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_8hz/U0/counter_reg[27]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_8hz/U0/counter_reg[27]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.367ns  (logic 0.249ns (67.838%)  route 0.118ns (32.162%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y94        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[27]/C
+    SLICE_X113Y94        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[27]/Q
+                         net (fo=3, routed)           0.118     0.259    main_design_i/clk_dvdr_8hz/U0/counter_reg[27]
+    SLICE_X113Y94        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.367 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[24]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.367    main_design_i/clk_dvdr_8hz/U0/counter_reg[24]_i_1_n_4
+    SLICE_X113Y94        FDRE                                         r  main_design_i/clk_dvdr_8hz/U0/counter_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_8hz/U0/counter_reg[11]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_8hz/U0/counter_reg[11]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y90        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[11]/C
+    SLICE_X113Y90        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[11]/Q
+                         net (fo=3, routed)           0.120     0.261    main_design_i/clk_dvdr_8hz/U0/counter_reg[11]
+    SLICE_X113Y90        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.369 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[8]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.369    main_design_i/clk_dvdr_8hz/U0/counter_reg[8]_i_1_n_4
+    SLICE_X113Y90        FDRE                                         r  main_design_i/clk_dvdr_8hz/U0/counter_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_8hz/U0/counter_reg[19]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_8hz/U0/counter_reg[19]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y92        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[19]/C
+    SLICE_X113Y92        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[19]/Q
+                         net (fo=3, routed)           0.120     0.261    main_design_i/clk_dvdr_8hz/U0/counter_reg[19]
+    SLICE_X113Y92        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.369 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.369    main_design_i/clk_dvdr_8hz/U0/counter_reg[16]_i_1_n_4
+    SLICE_X113Y92        FDRE                                         r  main_design_i/clk_dvdr_8hz/U0/counter_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_8hz/U0/counter_reg[3]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_8hz/U0/counter_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.412%)  route 0.120ns (32.588%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y88        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[3]/C
+    SLICE_X113Y88        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[3]/Q
+                         net (fo=3, routed)           0.120     0.261    main_design_i/clk_dvdr_8hz/U0/counter_reg[3]
+    SLICE_X113Y88        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.369 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[0]_i_2/O[3]
+                         net (fo=1, routed)           0.000     0.369    main_design_i/clk_dvdr_8hz/U0/counter_reg[0]_i_2_n_4
+    SLICE_X113Y88        FDRE                                         r  main_design_i/clk_dvdr_8hz/U0/counter_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_8hz/U0/counter_reg[7]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_8hz/U0/counter_reg[7]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.412%)  route 0.120ns (32.588%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y89        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[7]/C
+    SLICE_X113Y89        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[7]/Q
+                         net (fo=3, routed)           0.120     0.261    main_design_i/clk_dvdr_8hz/U0/counter_reg[7]
+    SLICE_X113Y89        CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     0.369 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[4]_i_1/O[3]
+                         net (fo=1, routed)           0.000     0.369    main_design_i/clk_dvdr_8hz/U0/counter_reg[4]_i_1_n_4
+    SLICE_X113Y89        FDRE                                         r  main_design_i/clk_dvdr_8hz/U0/counter_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_8hz/U0/counter_reg[8]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_8hz/U0/counter_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.371ns  (logic 0.256ns (68.994%)  route 0.115ns (31.006%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y90        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[8]/C
+    SLICE_X113Y90        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[8]/Q
+                         net (fo=3, routed)           0.115     0.256    main_design_i/clk_dvdr_8hz/U0/counter_reg[8]
+    SLICE_X113Y90        CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     0.371 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[8]_i_1/O[0]
+                         net (fo=1, routed)           0.000     0.371    main_design_i/clk_dvdr_8hz/U0/counter_reg[8]_i_1_n_7
+    SLICE_X113Y90        FDRE                                         r  main_design_i/clk_dvdr_8hz/U0/counter_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 main_design_i/clk_dvdr_8hz/U0/counter_reg[18]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            main_design_i/clk_dvdr_8hz/U0/counter_reg[18]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.373ns  (logic 0.252ns (67.585%)  route 0.121ns (32.415%))
+  Logic Levels:           2  (CARRY4=1 FDRE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y92        FDRE                         0.000     0.000 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[18]/C
+    SLICE_X113Y92        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[18]/Q
+                         net (fo=3, routed)           0.121     0.262    main_design_i/clk_dvdr_8hz/U0/counter_reg[18]
+    SLICE_X113Y92        CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     0.373 r  main_design_i/clk_dvdr_8hz/U0/counter_reg[16]_i_1/O[2]
+                         net (fo=1, routed)           0.000     0.373    main_design_i/clk_dvdr_8hz/U0/counter_reg[16]_i_1_n_5
+    SLICE_X113Y92        FDRE                                         r  main_design_i/clk_dvdr_8hz/U0/counter_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  sys_clk_pin
+  To Clock:  
+
+Max Delay             1 Endpoint
+Min Delay             1 Endpoint
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 clk_125mhz
+                            (clock source 'sys_clk_pin'  {rise@0.000ns fall@5.000ns period=8.000ns})
+  Destination:            main_design_i/enable_0/U0/clk_out_reg/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.365ns  (logic 1.451ns (61.339%)  route 0.914ns (38.661%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin fall edge)
+                                                      5.000     5.000 f  
+    H16                                               0.000     5.000 f  clk_125mhz (IN)
+                         net (fo=0)                   0.000     5.000    clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         1.451     6.451 f  clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.914     7.365    main_design_i/enable_0/U0/clk_in
+    SLICE_X113Y124       LDCE                                         f  main_design_i/enable_0/U0/clk_out_reg/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 clk_125mhz
+                            (clock source 'sys_clk_pin'  {rise@0.000ns fall@5.000ns period=8.000ns})
+  Destination:            main_design_i/enable_0/U0/clk_out_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.566ns  (logic 0.219ns (38.647%)  route 0.347ns (61.353%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    H16                                               0.000     0.000 r  clk_125mhz (IN)
+                         net (fo=0)                   0.000     0.000    clk_125mhz
+    H16                  IBUF (Prop_ibuf_I_O)         0.219     0.219 r  clk_125mhz_IBUF_inst/O
+                         net (fo=1, routed)           0.347     0.566    main_design_i/enable_0/U0/clk_in
+    SLICE_X113Y124       LDCE                                         r  main_design_i/enable_0/U0/clk_out_reg/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
